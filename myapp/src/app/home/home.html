@@ -1,1 +1,14 @@
-<p>home works!</p>
+<h1>Acasa</h1>
+<h2>{{ descriere }}</h2>
+<img *ngIf ='showImage' [src]="img" alt="">
+<p>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repellendus
+  quam, optio delectus blanditiis corporis error mollitia? Rem, porro. Dolorem
+  asperiores enim et labore magni animi porro sapiente, corporis quibusdam.
+</p>
+<h3>Formular schimba descrier</h3>
+<input type="text" [(ngModel)]="descriere"  />
+<p>salut</p>
+<button (click) = salut() > Start </button>
+<p>{{showImage}}</p>
+<button (click) = "showImg()">Afiseaza imagine</button>
