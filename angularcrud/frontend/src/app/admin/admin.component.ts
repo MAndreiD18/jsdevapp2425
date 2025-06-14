@@ -60,12 +60,15 @@ export class AdminComponent implements OnInit {
     formData.append('prenume', this.selectedUser.prenume);
     formData.append('email', this.selectedUser.email);
     formData.append('telefon', this.selectedUser.telefon);
+    formData.append('id', this.selectedUser.id?.toString());
     formData.append(
       'datanastere',
       this.selectedUser.datanastere?.toString() || ''
     );
     if (this.selectedFile) {
       formData.append('poza', this.selectedFile);
+    } else{
+      formData.append('poza', undefined as any);
     }
     // Pentru update, adaugă și id-ul dacă e cazul
 

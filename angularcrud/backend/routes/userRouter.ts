@@ -84,9 +84,10 @@ userRouter.put("/:id",jsonParser, async (req: Request, res: Response) => {
 });
 // Delete user
 userRouter.delete("/:id",jsonParser, async (req: Request, res: Response) => {
-  const user: User = req.body;
-  console.log(req.body);
-  userModel.deleteUser(user, (err: Error) => {
+  //const user: User = req.body;
+ // console.log(req.body);
+  const userId: number = Number(req.params.id);
+  userModel.deleteUser(userId, (err: Error) => {
     if (err) {
       return res.status(500).json({"message": err.message});
     }

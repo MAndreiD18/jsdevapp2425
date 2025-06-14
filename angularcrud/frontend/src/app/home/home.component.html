@@ -11,6 +11,7 @@
           <h5 class="card-title">{{ user.nume }} {{ user.prenume }}</h5>
           <p class="card-text">{{ user.email }}</p>
           <p class="card-text">{{ user.telefon }}</p>
+          <p class="card-text">{{ user.datanastere | date: 'dd-MM-yyyy' }}</p>
           <a [routerLink]="['/profil', user.id]" class="btn btn-primary"
             >Vezi mai mult</a
           >
