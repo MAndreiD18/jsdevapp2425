@@ -30,7 +30,7 @@ userRouter.get("/:id", async (req: Request, res: Response) => {
     res.status(200).json({"data": user});
   })
 });
-
+//Create user
 userRouter.post("/",jsonParser, async (req: Request, res: Response) => {
   console.log(req.body);
   console.log(req.files);
